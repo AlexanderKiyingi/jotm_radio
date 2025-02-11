@@ -1,0 +1,2 @@
+C:/jotm_radio/android/app/.cxx/RelWithDebInfo/3r3y22n4/x86_64/CMakeFiles/edit_cache.dir
+C:/jotm_radio/android/app/.cxx/RelWithDebInfo/3r3y22n4/x86_64/CMakeFiles/rebuild_cache.dir
