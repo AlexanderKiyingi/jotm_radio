@@ -56,5 +56,8 @@
 	<array>
 		<string>audio</string>
 	</array>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>This app uses the microphone to allow users to record audio messages.</string>
+
 </dict>
 </plist>
