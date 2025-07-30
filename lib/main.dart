@@ -111,44 +111,42 @@ class MyAppState extends State<MyApp> with WidgetsBindingObserver {
   }
 
   Widget flutterFlowIconButton({
-    required BuildContext context,
-    required double buttonSize,
-    required IconData icon, // IconData expected here, not a widget
-    required double iconSize,
-    required VoidCallback onPressed,
-    Color? borderColor, // Optional border color, defaults to theme-based color
-    double borderWidth = 1.0, // Default values
-    double borderRadius = 20.0, // Default values
-    Color? iconColor, // Optional icon color, defaults to theme-based color
-  }) {
-    return Container(
-      width: buttonSize,
-      height: buttonSize,
-      decoration: BoxDecoration(
-        shape: BoxShape.circle,
-        border: Border.all(
-          color: borderColor ??
-              AppTheme.secondaryBackgroundColor, // Default to theme color
-          width: borderWidth,
-        ),
-        borderRadius: BorderRadius.circular(borderRadius),
+  required BuildContext context,
+  required double buttonSize,
+  required IconData icon,
+  required double iconSize,
+  required VoidCallback onPressed,
+  Color? borderColor,
+  double borderWidth = 1.0,
+  double borderRadius = 20.0,
+  Color? iconColor,
+}) {
+  return Container(
+    width: buttonSize,
+    height: buttonSize,
+    decoration: BoxDecoration(
+      shape: BoxShape.circle, // Circle implies no borderRadius
+      border: Border.all(
+        color: borderColor ?? AppTheme.secondaryBackgroundColor,
+        width: borderWidth,
       ),
-      child: IconButton(
-        icon: FaIcon(
-          icon, // Using IconData here
-          color: iconColor ?? AppTheme.info, // Default to theme color
-          size: iconSize,
-        ),
-        onPressed: onPressed,
-        padding: EdgeInsets.zero,
-        constraints: BoxConstraints(
-          minWidth: buttonSize,
-          minHeight: buttonSize,
-        ),
+      // borderRadius: BorderRadius.circular(borderRadius), // ❌ REMOVE this line
+    ),
+    child: IconButton(
+      icon: FaIcon(
+        icon,
+        color: iconColor ?? AppTheme.info,
+        size: iconSize,
       ),
-    );
-  }
-
+      onPressed: onPressed,
+      padding: EdgeInsets.zero,
+      constraints: BoxConstraints(
+        minWidth: buttonSize,
+        minHeight: buttonSize,
+      ),
+    ),
+  );
+}
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
