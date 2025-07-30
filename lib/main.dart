@@ -69,7 +69,7 @@ class MyAppState extends State<MyApp> with WidgetsBindingObserver {
           id: '1',
           album: "JOTM Radio",
           title: "Jazz On The Move",
-          artUri: Uri.parse('https://example.com/albumart.jpg'),
+          artUri: Uri.parse('https://alexanderkiyingi.github.io/jotm-assests/images/1JOTM_LOGO_GOLD.png'),
         ),
       ));
     } on PlayerException {
