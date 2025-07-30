@@ -559,7 +559,7 @@ class MyAppState extends State<MyApp> with WidgetsBindingObserver {
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(20.0),
                                   child: Image.network(
-                                    'https://neurosciencenews.com/files/2023/09/love-song-recognition-neurosicnes.jpg',
+                                    'https://alexanderkiyingi.github.io/jotm-assests/images/love-song-recognition-neurosicnes.jpg',
                                     width: 300.0,
                                     height: 400.0,
                                     fit: BoxFit.cover,
