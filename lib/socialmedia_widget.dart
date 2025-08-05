@@ -9,10 +9,10 @@ class SocialmediaWidget extends StatefulWidget {
   const SocialmediaWidget({super.key});
 
   @override
-  _SocialmediaWidgetState createState() => _SocialmediaWidgetState();
+  SocialmediaWidgetState createState() => SocialmediaWidgetState();
 }
 
-class _SocialmediaWidgetState extends State<SocialmediaWidget> {
+class SocialmediaWidgetState extends State<SocialmediaWidget> {
   late SocialmediaModel _model;
   bool _disposed = false;
 
