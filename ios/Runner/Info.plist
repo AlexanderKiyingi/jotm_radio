@@ -55,7 +55,30 @@
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>audio</string>
+		<string>background-processing</string>
+		<string>background-fetch</string>
 	</array>
+	
+	<!-- Critical iOS Audio Streaming Configuration -->
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<false/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>edge.mixlr.com</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<false/>
+				<key>NSExceptionMinimumTLSVersion</key>
+				<string>TLSv1.2</string>
+				<key>NSExceptionRequiresForwardSecrecy</key>
+				<false/>
+			</dict>
+		</dict>
+	</dict>
+	
+	<!-- Required for iOS 14+ audio permissions -->
 	<key>NSMicrophoneUsageDescription</key>
 	<string>This app uses the microphone to allow users to record audio messages.</string>
 
