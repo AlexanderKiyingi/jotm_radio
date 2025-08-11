@@ -33,9 +33,7 @@ target 'Runner' do
 
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
   
-  # Add specific pod configurations for audio
-  pod 'just_audio', :git => 'https://github.com/ryanheise/just_audio.git'
-  pod 'audio_session', :git => 'https://github.com/ryanheise/audio_session.git'
+  # Flutter automatically manages plugin dependencies
 end
 
 post_install do |installer|
