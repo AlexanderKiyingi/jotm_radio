@@ -64,7 +64,7 @@ class MyAppState extends State<MyApp> with WidgetsBindingObserver {
     // Load audio from a source and handle errors
     try {
       await _player.setAudioSource(AudioSource.uri(
-        Uri.parse("https://edge.mixlr.com/channel/mjdyi"),
+        Uri.parse("https://dc4.serverse.com/proxy/nrgugstream/stream"),
         tag: MediaItem(
           id: '1',
           album: "JOTM Radio",
